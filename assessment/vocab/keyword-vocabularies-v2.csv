@@ -1,0 +1,175 @@
+keyword,frame,rationale
+plagiarism,detection,Direct reference to academic misconduct
+detection,detection,Surveillance and policing language
+misconduct,detection,Formal disciplinary framing
+penalty,detection,Punitive consequence
+penalties,detection,Punitive consequence
+turnitin,detection,Named detection product (UK-specific; retained for comparability)
+contract cheating,detection,Named misconduct category
+breach,detection,Framing of rule violation
+disciplinary,detection,Formal disciplinary framing
+sanction,detection,Punitive consequence
+sanctions,detection,Punitive consequence
+suspicious,detection,Presumption of bad faith
+investigation,detection,Formal disciplinary process
+academic integrity,detection,Misconduct framework anchor term
+collusion,detection,Named misconduct category
+unfair,detection,Misconduct framing
+cheat,detection,Direct accusation register
+cheating,detection,Direct accusation register
+detect,detection,Surveillance and policing language
+detected,detection,Surveillance and policing language
+offence,detection,Formal disciplinary framing
+offences,detection,Formal disciplinary framing
+punishment,detection,Punitive consequence
+prohibit,detection,Prohibition register
+prohibited,detection,Prohibition register
+violation,detection,Framing of rule violation
+unauthorised,detection,Permission-gated use
+unauthorized,detection,Permission-gated use
+declare,detection,Mandatory self-reporting of AI use
+declaration,detection,Mandatory self-reporting of AI use
+disclose,detection,Mandatory self-reporting of AI use
+not permitted,detection,Prohibition register
+not allowed,detection,Prohibition register
+zero tolerance,detection,Absolutist punitive register
+shall,compliance,Statutory obligation marker
+must,compliance,Mandatory obligation marker
+required,compliance,Mandatory obligation marker
+require,compliance,Mandatory obligation marker
+requirements,compliance,Mandatory obligation marker
+comply,compliance,Explicit compliance register
+complies,compliance,Explicit compliance register
+compliance,compliance,Explicit compliance register
+obligation,compliance,Formal duty language
+obligations,compliance,Formal duty language
+regulation,compliance,Regulatory instrument reference
+regulations,compliance,Regulatory instrument reference
+regulatory,compliance,Regulatory instrument reference
+directive,compliance,Binding instruction from regulator
+directives,compliance,Binding instruction from regulator
+standards,compliance,Externally set benchmark to be met
+oversight,compliance,Supervisory control structure
+monitor,compliance,Institutional compliance monitoring
+monitoring,compliance,Institutional compliance monitoring
+audit,compliance,Formal verification process
+audits,compliance,Formal verification process
+corrective,compliance,Remedial enforcement action
+enforce,compliance,Enforcement register
+enforcement,compliance,Enforcement register
+governance,compliance,Formal control structure
+accountability,compliance,Answerability structure
+accountable,compliance,Answerability structure
+mandate,compliance,Binding requirement
+mandatory,compliance,Binding requirement
+safeguard,compliance,Risk-control measure
+safeguards,compliance,Risk-control measure
+mechanisms,compliance,Institutional control apparatus
+risk,compliance,Risk-management register
+risks,compliance,Risk-management register
+mitigate,compliance,Risk-management register
+approval,compliance,Permission-gating by institution
+authorisation,compliance,Permission-gating by institution
+literacy,provision,Capability the institution supplies
+digital literacy,provision,Capability the institution supplies
+information literacy,provision,Capability the institution supplies
+media literacy,provision,Capability the institution supplies
+ai literacy,provision,Capability the institution supplies
+pedagogy,provision,Teaching-practice reference
+skill,provision,Capability framed as delivered outcome
+skills,provision,Capability framed as delivered outcome
+curriculum,provision,Institutional teaching structure
+learning,provision,Generic developmental term; institution-supplied
+learn,provision,Generic developmental term; institution-supplied
+teach,provision,Institution-side activity
+teaching,provision,Institution-side activity
+opportunity,provision,Institution-offered affordance
+opportunities,provision,Institution-offered affordance
+assessment design,provision,Institution-side assessment practice
+develop,provision,Institution-side development of capability
+development,provision,Institution-side development of capability
+competence,provision,Capability framed as delivered outcome
+competencies,provision,Capability framed as delivered outcome
+capability,provision,Capability framed as delivered outcome
+capabilities,provision,Capability framed as delivered outcome
+support,provision,Institution-supplied assistance
+guidance,provision,Institution-supplied direction
+training,provision,Institution-supplied instruction
+capacity building,provision,Institution-supplied instruction
+understand,provision,Comprehension the institution ensures
+understanding,provision,Comprehension the institution ensures
+engage,provision,Participation solicited by institution
+engagement,provision,Participation solicited by institution
+practice,provision,Professional or academic practice reference
+practices,provision,Professional or academic practice reference
+personalised learning,provision,Institution-configured learning pathway
+personalized learning,provision,Institution-configured learning pathway
+agency,agency,Explicit attribution of agency to the learner
+autonomy,agency,Explicit attribution of self-determination
+empower,agency,Transfer of power to the learner
+empowerment,agency,Transfer of power to the learner
+co-creation,agency,Learner as co-author of practice or policy
+co-create,agency,Learner as co-author of practice or policy
+student voice,agency,Learner input into institutional decisions
+student feedback,agency,Learner input into institutional decisions
+students as partners,agency,Explicit partnership framing
+dialogue,agency,Two-way rather than directive communication
+negotiate,agency,Terms settled with rather than for the learner
+discretion,agency,Judgement left to the individual
+judgement,agency,Judgement left to the individual
+critical thinking,agency,Independent evaluative capacity
+critical,agency,Independent evaluative capacity
+creativity,agency,Generative rather than compliant capacity
+creative,agency,Generative rather than compliant capacity
+reflection,agency,Self-directed evaluative practice
+reflective,agency,Self-directed evaluative practice
+evaluate,agency,Independent evaluative capacity
+self-directed,agency,Explicit learner direction
+ownership,agency,Learner ownership of work or process
+consulted,agency,Learner consulted on decisions
+ethical,ethics,Normative principle language
+ethics,ethics,Normative principle language
+responsible,ethics,Normative principle language
+responsibility,ethics,Normative principle language
+fairness,ethics,Named ethical principle
+fair,ethics,Named ethical principle
+equity,ethics,Named ethical principle
+equitable,ethics,Named ethical principle
+inclusive,ethics,Named ethical principle
+inclusion,ethics,Named ethical principle
+inclusivity,ethics,Named ethical principle
+transparency,ethics,Named ethical principle
+transparent,ethics,Named ethical principle
+bias,ethics,Named ethical risk
+discrimination,ethics,Named ethical risk
+non-discrimination,ethics,Named ethical principle
+privacy,ethics,Named ethical principle
+confidentiality,ethics,Named ethical principle
+human rights,ethics,Named ethical principle
+dignity,ethics,Named ethical principle
+social justice,ethics,Named ethical principle
+explainability,ethics,Named ethical principle
+explainable,ethics,Named ethical principle
+trust,ethics,Relational value
+trustworthy,ethics,Relational value
+human-centred,ethics,Human primacy over automation
+human-centric,ethics,Human primacy over automation
+sustainability,ethics,Named ethical principle
+analytics,datafication,Treatment of learners as analysable data
+learning analytics,datafication,Treatment of learners as analysable data
+predictive analytics,datafication,Predictive modelling of learners
+student data,datafication,Learner as data source
+personal data,datafication,Learner as data source
+performance data,datafication,Learner as data source
+data collection,datafication,Extraction of learner data
+data-driven,datafication,Decisions derived from learner data
+data driven,datafication,Decisions derived from learner data
+profiling,datafication,Classification of individuals by model
+at-risk,datafication,Predictive classification of learners
+retention,datafication,Institutional metric applied to learners
+track,datafication,Ongoing observation of individuals
+tracking,datafication,Ongoing observation of individuals
+surveillance,datafication,Explicit observation register
+algorithmic,datafication,Automated decision processes
+automated grading,datafication,Automated judgement of learners
+automated assessment,datafication,Automated judgement of learners

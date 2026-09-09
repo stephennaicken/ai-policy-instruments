@@ -1,0 +1,53 @@
+element_id,obligation,element,indicators,inter_alia
+a1,5(a),Ethical use covered,ethical use|ethical usage|responsible use|ethics,0
+a2,5(a),Academic integrity covered,academic integrity|academic misconduct|academic honesty|plagiarism,0
+a3,5(a),Governance covered,governance|oversight|committee|steering group|accountable officer|responsible owner,0
+a4,5(a),Applies to teaching,teaching|instruction|lecturer|faculty|academic staff,1
+a5,5(a),Applies to learning,learning|study|student learning,1
+a6,5(a),Applies to assessment,assessment|assessed work|examination|coursework,1
+a7,5(a),Applies to grading,grading|marking|grade|mark scheme|moderation,1
+a8,5(a),Applies to research,research|dissertation|thesis|publication,1
+b1,5(b),Review or update commitment,review|updated|update|revised|revision|periodic|annually|next review,0
+b2,5(b),Trigger: technological change,new technolog|emerging technolog|technological develop|keep pace|as the technology|evolving,0
+b3,5(b),Trigger: legal or regulatory change,legal develop|legislation|regulatory change|change in law|statutory,0
+c1,5(c),Diversity and inclusion,diversity|inclusion|inclusive|inclusivity,0
+c2,5(c),Equitable access,equitable access|equal access|fair access|equity of access|affordab|free access|licence for all|license for all,0
+c3,5(c),Access to AI literacy,ai literacy|digital literacy|literacy training|training for students,1
+c4,5(c),Access to tools and services,tools and services|access to tools|institutional licence|institutional license|provided tools|approved tools,1
+c5,5(c),Faculty development,faculty development|staff development|continuing professional|cpd|staff training|academic development,1
+c6,5(c),Protected grounds named,socio-?economic|geographic|background|disabilit|widening participation|disadvantag,1
+d1,5(d),AI incorporated into curriculum,"curricul|programme design|module design|embed|integrat.{0,20}curricul",0
+d2,5(d),Covers coursework and assignments,coursework|assignment|submitted work,1
+d3,5(d),Fosters responsible usage,responsible us|appropriate us|effective us|good practice,0
+d4,5(d),Technical dimensions of AI taught,how (?:it|ai|they|these tools) work|technical|limitation|hallucinat|accuracy|\bmodel\b|training data,0
+d5,5(d),Ethical dimensions of AI taught,ethical dimension|ethical implication|ethical issue|ethics of|bias|fairness,0
+e1,5(e),Programmes updated for AI developments,"update.{0,30}programme|programme.{0,30}update|curriculum review|programme review|revalidat|periodic review",0
+f1,5(f),Disclosure of AI use required,"disclos|declar|state.{0,20}use of ai|must indicate|report.{0,15}use of ai|transparen.{0,20}use",0
+f2,5(f),Acknowledgement of AI-generated content,"acknowledge|acknowledgement|cite|citation|reference.{0,15}ai|attribut",0
+f3,5(f),"Scope covers coursework, assignments, research",coursework|assignment|research|dissertation|thesis,1
+g1,5(g),Intellectual property addressed,intellectual property|\bip\b|ipr,0
+g2,5(g),Authorship addressed,authorship|author,1
+g3,5(g),Patents addressed,patent,1
+g4,5(g),Copyright addressed,copyright|copyrighted,1
+g5,5(g),Citation norms addressed,citation|cite|referencing|reference list|bibliograph,1
+h1,5(h),Monitoring mechanism established,"monitor|oversee|audit|review of use|track.{0,15}use|log|record of use",0
+h2,5(h),Compliance assurance,complian|comply|conform|assurance|quality assurance,0
+h3,5(h),Scope includes administration,administrat|professional services|business process|admissions|student records,1
+i01,5(i),Principle: transparency,transparen,1
+i02,5(i),Principle: fairness,fairness|\bfair\b,1
+i03,5(i),Principle: accountability,accountab,1
+i04,5(i),Principle: explainability,"explainab|explicab|interpretab|explain.{0,20}decision",1
+i05,5(i),Principle: inclusivity,inclusiv|inclusion,1
+i06,5(i),Principle: non-discrimination,non-?discriminat|discriminat,1
+i07,5(i),Principle: social justice,social justice|justice|equity,1
+i08,5(i),Principle: data privacy and security,privacy|data protection|gdpr|confidential|data security|personal data,1
+i09,5(i),Principle: environmental sustainability,environmental|sustainab|carbon|energy|climate,1
+i10,5(i),Principle: reliability,reliab|accura|robust|hallucinat,1
+i11,5(i),Principle: safety,safety|safe use|harm|unsafe,1
+j1,5(j),Risk of harm mitigated,risk|harm|mitigat|adverse|impact assessment,0
+j2,5(j),Safeguards in place,safeguard|control|protection|mechanism|measure,0
+j3,5(j),Human rights respected,human right|rights of|fundamental right,0
+j4,5(j),Dignity respected,dignity|respect for the person|humane,0
+k1,5(k),Corrective action provided for,corrective|remedy|remedial|rectif|escalat|action will be taken|consequence,0
+k2,5(k),Response to misuse of AI tools,misuse|improper use|inappropriate use|breach|violation,0
+k3,5(k),Response to non-compliance,non-?complian|failure to (?:comply|follow|adhere)|not compl|in breach|breach of|contravene|breach(?:es)? of (?:this |the )?polic|does not comply,0

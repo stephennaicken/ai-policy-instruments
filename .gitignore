@@ -1,0 +1,12 @@
+# Source documents are NOT redistributable.
+# Assessed institutional policies are internal documents, not ours to redistribute.
+# The HEC guidelines PDF carries a notice against reproduction.
+# The HEPI report PDF is not covered by the CC BY 4.0 licence on its data.
+assessment/policies/
+
+# The UK corpus is a separate CC BY 4.0 repository — clone it, don't fork it here.
+uk-university-ai-policies/
+
+__pycache__/
+*.pyc
+.DS_Store
