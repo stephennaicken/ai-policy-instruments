@@ -41,6 +41,10 @@ education-framed policies in Britain — and on the six-dimension instrument is
 decides) · `ethics` (principle language) · `datafication` (learner as data
 object).
 
+Agency is reported twice: raw, and as `agency_share_strict`, which excludes
+`discretion`, `judgement` and `agency` — terms that mean staff authority, not
+student agency, in assessment regulations.
+
 ## Regulation 5 conformance
 
 The Higher Education (Use of Artificial Intelligence) Regulations 2026
@@ -53,7 +57,7 @@ indicator fires, an element is almost certainly unaddressed; finding the word
 "monitor" does not establish that a monitoring mechanism exists. Use
 `--adjudication out.csv` to produce an assessor worksheet with evidence attached.
 
-Calibration: 94% on the HEC guidelines (ceiling test), mean 37% across the 96 UK
+Calibration: 96% on the HEC guidelines (ceiling test), mean 37% across the 96 UK
 policies written without reference to these regulations (negative control).
 
 ## Setup
@@ -95,14 +99,14 @@ guidelines PDF carries a notice against reproduction. Sources:
 ## Attribution and licence
 
 The v2 vocabulary is a **derivative** of the keyword vocabularies published in
-the UK corpus repository under CC BY 4.0. Of its 174 terms, **77 are inherited**
+the UK corpus repository under CC BY 4.0. Of its 177 terms, **77 are inherited**
 from that source:
 
 | Dimension | Inherited | Total |
 |---|---|---|
 | detection | 34 | 34 |
 | provision | 27 | 34 |
-| agency | 12 | 23 |
+| agency | 12 | 26 |
 | ethics | 4 | 28 |
 | compliance | 0 | 37 |
 | datafication | 0 | 18 |

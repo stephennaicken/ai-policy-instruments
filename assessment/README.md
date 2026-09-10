@@ -83,7 +83,7 @@ of institutions describing their own service provision.
 | `ethics` | Normative principle language | Split out |
 | `datafication` | Learner as data object; analytics, profiling, at-risk | New |
 
-`assessment/vocab/keyword-vocabularies-v2.csv` — 174 terms, same
+`assessment/vocab/keyword-vocabularies-v2.csv` — 177 terms, same
 `keyword,frame,rationale` schema as the UK file, no duplicate terms.
 
 Derived indices: `agency_share` (agency / agency+provision), `detection_ratio`
@@ -125,10 +125,15 @@ and **zero** agency terms.
   student-facing AI policy but assessor authority in assessment regulations
   ("at the discretion of the assessment board", "academic judgement", and even
   "a person/agency external to the institution"). On one combined corpus of an
-  AI policy plus assessment regulations, these three inflated `agency_share`
-  from 0.079 to 0.177, moving it from the UK median to the 79th percentile. On any document containing
-  assessment or examination regulations, adjudicate agency hits before
-  reporting them, or re-score with those three terms removed.
+  AI policy plus assessment regulations they lift `agency_share` from 0.072 to
+  0.171 — from the UK median to the 79th percentile. The scorer therefore
+  reports `agency_share_strict`, which excludes them, alongside the raw figure,
+  and marks them with `*` in its output. Use the strict figure for any document
+  containing assessment or examination rules. A fourth term, `consulted`, was
+  removed outright: in the 96 UK policies it appears three times and never
+  means students were consulted, and in one institutional draft all three uses
+  referred to colleagues or to records. It is replaced by student-specific
+  phrases ("students were consulted", "consultation with students").
 
 ---
 
@@ -169,7 +174,7 @@ it does not replace the reading.
 
 | | element coverage |
 |---|---|
-| HEC guidelines (ceiling test — the regulator's own document) | 94% |
+| HEC guidelines (ceiling test — the regulator's own document) | 96% |
 | 96 UK policies (negative control — written without reference to these regs) | mean 37%, median 35%, range 4–88% |
 
 The UK gap profile is what a domain expert would predict: strongest on
@@ -185,6 +190,15 @@ patents (1/96, though *intellectual property* appears 42 times),
 explainability (`explainab` twice in 176,000 words) and dignity (twice).
 Capturing groups were converted to non-capturing throughout, since `findall`
 returns group contents rather than matches.
+
+The protected-grounds element (`c6`) was wrong in both directions. It counted
+"background research" as a protected ground, and it missed disability and
+language provisions worded as "documented accommodations" and "non-native
+speakers". It now ignores *background* when followed by research, reading and
+similar words, and catches *accommodations*, *reasonable adjustment*,
+*non-native*, *second language* and *English language learner*. That was the
+instrument's first confirmed false negative: "absent" is strong evidence, not
+proof.
 
 ## Running it
 

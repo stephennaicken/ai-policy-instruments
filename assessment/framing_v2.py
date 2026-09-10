@@ -19,6 +19,13 @@ from collections import OrderedDict
 
 DIMENSIONS = ["detection", "compliance", "provision", "agency", "ethics", "datafication"]
 
+# Mean student self-determination in a student-facing AI policy but staff
+# authority in assessment regulations: "at the discretion of the assessment
+# board", "academic judgement", even "a person/agency external to the
+# institution". agency_share_strict excludes them; report it alongside the raw
+# figure for any document that contains assessment or examination rules.
+AMBIGUOUS_AGENCY = frozenset({"discretion", "judgement", "agency"})
+
 
 def load_vocab(path):
     v = OrderedDict((d, []) for d in DIMENSIONS)
@@ -64,9 +71,12 @@ def score(text, vocab):
     def safe(n, d):
         return n / d if d else 0.0
 
+    strict_agency = raw["agency"] - sum(hits["agency"].get(t, 0) for t in AMBIGUOUS_AGENCY)
     indices = {
         # of the developmental language, how much positions the student as decider
         "agency_share": safe(raw["agency"], raw["agency"] + raw["provision"]),
+        # the same, without the role-ambiguous terms
+        "agency_share_strict": safe(strict_agency, strict_agency + raw["provision"]),
         # the UK study's axis, rebuilt: policing vs everything developmental
         "detection_ratio": safe(raw["detection"],
                                 raw["detection"] + raw["provision"] + raw["agency"]),

@@ -5,7 +5,7 @@ Usage: python3 assessment/score_v2.py <policy.txt> [--name NAME]
 import argparse, csv, sys, os, statistics as st
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
-from framing_v2 import load_vocab, score, DIMENSIONS
+from framing_v2 import load_vocab, score, DIMENSIONS, AMBIGUOUS_AGENCY
 
 csv.field_size_limit(sys.maxsize)
 REPO = os.path.join(HERE, "..", "uk-university-ai-policies")
@@ -47,9 +47,10 @@ def main():
     for k, v in s["indices"].items():
         print(f"{k:20s} {v:7.3f} {st.median(refidx[k]):10.3f} {pct(v, refidx[k]):9.0f}th")
 
-    print("\nagency terms present:")
+    print("\nagency terms present (* role-ambiguous, excluded from agency_share_strict):")
     fired = {t: n for t, n in s["hits"]["agency"].items() if n}
-    print("   ", ", ".join(f"{t} ({n})" for t, n in sorted(fired.items(), key=lambda x: -x[1])) or "(none)")
+    print("   ", ", ".join(f"{t}{'*' if t in AMBIGUOUS_AGENCY else ''} ({n})"
+                           for t, n in sorted(fired.items(), key=lambda x: -x[1])) or "(none)")
     print("datafication terms present:")
     fired = {t: n for t, n in s["hits"]["datafication"].items() if n}
     print("   ", ", ".join(f"{t} ({n})" for t, n in sorted(fired.items(), key=lambda x: -x[1])) or "(none)")

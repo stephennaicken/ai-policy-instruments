@@ -15,7 +15,7 @@ c2,5(c),Equitable access,equitable access|equal access|fair access|equity of acc
 c3,5(c),Access to AI literacy,ai literacy|digital literacy|literacy training|training for students,1
 c4,5(c),Access to tools and services,tools and services|access to tools|institutional licence|institutional license|provided tools|approved tools,1
 c5,5(c),Faculty development,faculty development|staff development|continuing professional|cpd|staff training|academic development,1
-c6,5(c),Protected grounds named,socio-?economic|geographic|background|disabilit|widening participation|disadvantag,1
+c6,5(c),Protected grounds named,socio-?economic|geographic|\bbackgrounds?\b(?!\s+(?:research|reading|information|material|knowledge))|disabilit|widening participation|disadvantag|\baccommodations?\b|reasonable adjustment|english language learner|non-native|second language,1
 d1,5(d),AI incorporated into curriculum,"curricul|programme design|module design|embed|integrat.{0,20}curricul",0
 d2,5(d),Covers coursework and assignments,coursework|assignment|submitted work,1
 d3,5(d),Fosters responsible usage,responsible us|appropriate us|effective us|good practice,0
