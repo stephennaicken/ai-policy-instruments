@@ -18,6 +18,7 @@ free-standing duty.
 """
 import csv, os, re
 from negation import negated_spans, in_spans
+from textnorm import normalise
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 REG5 = os.path.join(HERE, "reg5")
@@ -33,7 +34,7 @@ def load_spec():
 
 
 def _norm(text):
-    return re.sub(r"\s+", " ", text)
+    return normalise(text)
 
 
 def evidence(text, pattern, limit=3, window=100):

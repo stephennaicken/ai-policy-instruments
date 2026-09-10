@@ -16,6 +16,7 @@ in three ways, each justified empirically in assessment/README.md:
 """
 import csv, re
 from negation import negated_spans, in_spans
+from textnorm import normalise
 from collections import OrderedDict
 
 DIMENSIONS = ["detection", "compliance", "provision", "agency", "ethics", "datafication"]
@@ -67,6 +68,7 @@ def _decollide(hits, vocab):
 
 
 def score(text, vocab):
+    text = normalise(text)
     wc = len(text.split())
     hits = {d: count_terms(text, terms) for d, terms in vocab.items()}
     hits = _decollide(hits, vocab)

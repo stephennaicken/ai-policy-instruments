@@ -266,3 +266,24 @@ move. Negation is not the main reason a policy that writes out due process
 scores as enforcement-shaped. Its vocabulary is: violations, sanctions,
 offences. Telling a procedure that protects students from one that polices
 them is not a keyword problem.
+
+---
+
+# Text normalisation
+
+Text extracted from PDFs breaks lines mid-phrase, so "academic\nintegrity"
+did not match the term "academic integrity". v2 and the regulation 5 screen now
+read text the same way, through `textnorm.py`: runs of whitespace collapse to
+one space, and a hyphen at a line break is kept and the line joined. The
+regulation 5 screen already collapsed whitespace; v2 did not, so the two could
+disagree about the same document.
+
+**v1 deliberately does not normalise.** Across the UK corpus, 13 multiword terms
+are split by a line break ("academic integrity" in several policies), and the
+published counts miss them. Normalising would change 12 more of the 96
+published framing ratios, so v1 counts the text as Illingworth did. This is a
+small undercount in the published data, not an error in the replication.
+
+For v2 the effect is at the third decimal place on PDF-derived documents, and
+nil on the UK baseline: every UK median is unchanged.
+

@@ -6,6 +6,7 @@ import argparse, csv, re, sys, os, statistics as st
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
 from framing_v2 import load_vocab, score, DIMENSIONS, AMBIGUOUS_AGENCY
+from textnorm import normalise
 
 csv.field_size_limit(sys.maxsize)
 REPO = os.path.join(HERE, "..", "uk-university-ai-policies")
@@ -32,7 +33,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("path"); ap.add_argument("--name", default=None)
     a = ap.parse_args()
-    text = open(a.path, encoding="utf-8", errors="replace").read()
+    text = normalise(open(a.path, encoding="utf-8", errors="replace").read())
     s = score(text, V)
     name = a.name or os.path.basename(a.path)
     ref, refidx = uk_reference()
