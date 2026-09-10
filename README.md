@@ -45,6 +45,11 @@ Agency is reported twice: raw, and as `agency_share_strict`, which excludes
 `discretion`, `judgement` and `agency` — terms that mean staff authority, not
 student agency, in assessment regulations.
 
+Hits inside rejection clauses ("does not rely on detection tools", "rather than
+surveillance") are reported separately: `detection_ratio_adj` and
+`enforcement_ratio_adj` set them aside. Prohibitions ("must not use AI") still
+count as enforcement. v1 is unchanged.
+
 ## Regulation 5 conformance
 
 The Higher Education (Use of Artificial Intelligence) Regulations 2026

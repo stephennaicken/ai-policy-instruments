@@ -15,6 +15,7 @@ in three ways, each justified empirically in assessment/README.md:
                                                by misconduct detection)
 """
 import csv, re
+from negation import negated_spans, in_spans
 from collections import OrderedDict
 
 DIMENSIONS = ["detection", "compliance", "provision", "agency", "ethics", "datafication"]
@@ -25,6 +26,10 @@ DIMENSIONS = ["detection", "compliance", "provision", "agency", "ethics", "dataf
 # institution". agency_share_strict excludes them; report it alongside the raw
 # figure for any document that contains assessment or examination rules.
 AMBIGUOUS_AGENCY = frozenset({"discretion", "judgement", "agency"})
+
+# Dimensions whose terms name institutional practices. A hit inside a rejection
+# clause ("does not rely on detection tools") is reported as negated.
+NEGATABLE = ("detection", "compliance", "datafication")
 
 
 def load_vocab(path):
@@ -72,6 +77,17 @@ def score(text, vocab):
         return n / d if d else 0.0
 
     strict_agency = raw["agency"] - sum(hits["agency"].get(t, 0) for t in AMBIGUOUS_AGENCY)
+    low = text.lower()
+    spans = negated_spans(low)
+    negated = {d: 0 for d in DIMENSIONS}
+    negated_hits = []
+    for d in NEGATABLE:
+        for t in vocab[d]:
+            for m in re.finditer(r"\b" + re.escape(t) + r"\b", low):
+                if in_spans(m.start(), spans):
+                    negated[d] += 1
+                    negated_hits.append((d, t, m.start()))
+    adj = {d: max(0, raw[d] - negated[d]) for d in raw}
     indices = {
         # of the developmental language, how much positions the student as decider
         "agency_share": safe(raw["agency"], raw["agency"] + raw["provision"]),
@@ -86,9 +102,16 @@ def score(text, vocab):
                                   + raw["provision"] + raw["agency"]),
         # principle language as a share of all framing
         "ethics_share": safe(raw["ethics"], sum(raw.values())),
+        # the same two ratios with hits inside rejection clauses set aside
+        "detection_ratio_adj": safe(adj["detection"],
+                                    adj["detection"] + raw["provision"] + raw["agency"]),
+        "enforcement_ratio_adj": safe(adj["detection"] + adj["compliance"],
+                                      adj["detection"] + adj["compliance"]
+                                      + raw["provision"] + raw["agency"]),
     }
     return {"word_count": wc, "raw": raw, "per1k": per1k,
-            "hits": hits, "indices": indices}
+            "hits": hits, "indices": indices,
+            "negated": negated, "negated_hits": negated_hits}
 
 
 def overlap_report(vocab):

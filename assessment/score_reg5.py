@@ -54,6 +54,13 @@ def main():
         for o, m in soft:
             print(f"  {o}  {m}")
 
+    neg_only = [e for e in res["elements"] if e["hits"] and e["negated"] == e["hits"]]
+    if neg_only:
+        print("\nEvidence found only inside rejection clauses (\"rather than\", \"does not rely on\") --")
+        print("counted by the screen, but check before crediting:")
+        for e in neg_only:
+            print(f"  {e['obligation']}  {e['element']}")
+
     if a.evidence:
         print("\n" + "=" * 70 + "\nEVIDENCE\n" + "=" * 70)
         for e in res["elements"]:
@@ -67,11 +74,11 @@ def main():
         with open(a.adjudication, "w", newline="") as f:
             w = csv.writer(f)
             w.writerow(["element_id", "obligation", "element", "non_exhaustive",
-                        "screening", "hits", "evidence",
+                        "screening", "hits", "negated_hits", "evidence",
                         "assessor_rating_0_3", "assessor_note"])
             for e in res["elements"]:
                 w.writerow([e["element_id"], e["obligation"], e["element"],
-                            "yes" if e["inter_alia"] else "no", e["status"], e["hits"],
+                            "yes" if e["inter_alia"] else "no", e["status"], e["hits"], e["negated"],
                             " || ".join(e["evidence"]), "", ""])
         print(f"\nAssessor worksheet written to {a.adjudication}")
         print("Rating scale: 0 absent · 1 mentioned · 2 addressed · 3 addressed with a "

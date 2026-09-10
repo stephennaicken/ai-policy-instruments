@@ -226,3 +226,43 @@ python3 assessment/assess.py policy.txt --name "My University"   # all three
 Regulation 5 binds institutions, not the Commission. Screening the HEC
 guidelines against it is a ceiling test of the instrument, not an assessment of
 the HEC — the Commission's own duties are in regulation 4.
+
+---
+
+# Negation
+
+Keyword counting cannot tell "the institution does not rely on detection tools"
+from "the institution relies on detection tools". `negation.py` finds rejection
+clauses, where a policy declines, denies or sets aside a practice, and marks
+hits inside them. It follows NegEx: a cue, then scope to the end of the clause.
+
+Cues are "does not rely on / use / require / prescribe…" (with a subject before
+"not", so imperatives addressed to students do not count), "rather than",
+"instead of", "not intended as", "is not a", "no longer" and "not the primary".
+Prohibitions are deliberately not cues: "must not use AI" and "not permitted"
+are enforcement, and several are detection terms. A cue that follows *if*,
+*when* or *unless* is a condition, and is skipped.
+
+Negated hits are reported, never silently removed:
+
+- **v2** keeps its raw indices and adds `detection_ratio_adj` and
+  `enforcement_ratio_adj`, which set negated detection, compliance and
+  datafication hits aside. `score_v2.py` lists the clauses.
+- **Regulation 5** coverage is unchanged. The worksheet gains a `negated_hits`
+  column, and `score_reg5.py` lists any element whose only evidence sits in a
+  rejection clause, to be checked before it is credited.
+- **v1 does not use it.** It must reproduce Illingworth (2026) exactly.
+
+**Precision.** Across the 96 UK policies the layer flags 11 hits, 10 of them
+correctly, for example "rather than seek to prohibit your use of these tools"
+and "poor academic practice rather than academic misconduct". A first version
+was right about half the time; tightening removed "not only… but also",
+"should not be used" (a prohibition) and conditionals. The scope is
+deliberately conservative, so it misses some rejections.
+
+**Magnitude.** Small: 0.5% of detection hits and 0.3% of compliance hits in the
+UK corpus sit in rejection clauses, and the UK median enforcement ratio does not
+move. Negation is not the main reason a policy that writes out due process
+scores as enforcement-shaped. Its vocabulary is: violations, sanctions,
+offences. Telling a procedure that protects students from one that polices
+them is not a keyword problem.

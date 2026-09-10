@@ -17,6 +17,7 @@ non-exhaustive, so a miss is weaker evidence of breach than a miss on a
 free-standing duty.
 """
 import csv, os, re
+from negation import negated_spans, in_spans
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 REG5 = os.path.join(HERE, "reg5")
@@ -62,12 +63,16 @@ def assess(text, obligations=None, elements=None, limit=3):
     if obligations is None:
         obligations, elements = load_spec()
     t = _norm(text)
+    spans = negated_spans(t)
     results, by_ob = [], {}
     for e in elements:
-        hits = len(e["pattern"].findall(t))
+        matches = list(e["pattern"].finditer(t))
+        hits = len(matches)
+        negated = sum(1 for m in matches if in_spans(m.start(), spans))
         r = {"element_id": e["element_id"], "obligation": e["obligation"],
              "element": e["element"], "inter_alia": e["inter_alia"],
-             "hits": hits, "status": "present" if hits else "ABSENT",
+             "hits": hits, "negated": negated,
+             "status": "present" if hits else "ABSENT",
              "evidence": evidence(t, e["pattern"], limit) if hits else []}
         results.append(r)
         by_ob.setdefault(e["obligation"], []).append(r)

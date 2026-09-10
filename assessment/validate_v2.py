@@ -28,7 +28,8 @@ for d in DIMENSIONS:
           f"{min(vals):6.2f} {max(vals):7.2f} {zero:14d}/{len(vals)}")
 
 print("\nDerived indices across the UK corpus:")
-for k in ("agency_share", "agency_share_strict", "detection_ratio", "enforcement_ratio", "ethics_share"):
+for k in ("agency_share", "agency_share_strict", "detection_ratio", "detection_ratio_adj",
+          "enforcement_ratio", "enforcement_ratio_adj", "ethics_share"):
     vals = [s["indices"][k] for _, s in rows]
     print(f"  {k:18s} mean {st.mean(vals):.3f}   median {st.median(vals):.3f}   "
           f"range {min(vals):.3f}–{max(vals):.3f}")
