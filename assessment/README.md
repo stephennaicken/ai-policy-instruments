@@ -175,7 +175,7 @@ it does not replace the reading.
 | | element coverage |
 |---|---|
 | HEC guidelines (ceiling test — the regulator's own document) | 96% |
-| 96 UK policies (negative control — written without reference to these regs) | mean 37%, median 35%, range 4–88% |
+| 96 UK policies (negative control — written without reference to these regs) | mean 36%, median 35%, range 4–88% |
 
 The UK gap profile is what a domain expert would predict: strongest on
 disclosure and acknowledgement (5(f)), near-absent on equitable access (5(c)),
@@ -199,6 +199,20 @@ similar words, and catches *accommodations*, *reasonable adjustment*,
 *non-native*, *second language* and *English language learner*. That was the
 instrument's first confirmed false negative: "absent" is strong evidence, not
 proof.
+
+A word-boundary audit then checked every alternative in every pattern against
+the whole words it actually matched, across the UK corpus and the institutional
+documents. Most in-word matches were harmless inflections. The ones that changed
+the meaning were fixed. The monitoring element matched `log` inside
+*technology*, crediting 48 of the 96 UK policies with a monitoring mechanism
+for mentioning technology (69 → 21 policies). Authorship matched *unauthorised*,
+*authority* and *authorised* (42 → 34). Smaller cases caught *synthesis*,
+*upgrade*, *pharmacy*, *auditory*, *indiscriminate* and *risk-taking*. The UK
+mean fell from 37% to 36%.
+
+Word boundaries cannot fix meaning. Negations ("rather than a surveillance
+mechanism"), phrases like "consequences of technology", and document headers
+still produce matches. That is what adjudication is for.
 
 ## Running it
 

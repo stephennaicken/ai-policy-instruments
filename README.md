@@ -57,7 +57,7 @@ indicator fires, an element is almost certainly unaddressed; finding the word
 "monitor" does not establish that a monitoring mechanism exists. Use
 `--adjudication out.csv` to produce an assessor worksheet with evidence attached.
 
-Calibration: 96% on the HEC guidelines (ceiling test), mean 37% across the 96 UK
+Calibration: 96% on the HEC guidelines (ceiling test), mean 36% across the 96 UK
 policies written without reference to these regulations (negative control).
 
 ## Setup

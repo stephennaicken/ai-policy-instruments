@@ -5,8 +5,8 @@ a3,5(a),Governance covered,governance|oversight|committee|steering group|account
 a4,5(a),Applies to teaching,teaching|instruction|lecturer|faculty|academic staff,1
 a5,5(a),Applies to learning,learning|study|student learning,1
 a6,5(a),Applies to assessment,assessment|assessed work|examination|coursework,1
-a7,5(a),Applies to grading,grading|marking|grade|mark scheme|moderation,1
-a8,5(a),Applies to research,research|dissertation|thesis|publication,1
+a7,5(a),Applies to grading,(?<!-)\bgrad(?:e|es|ed|ing)\b|\bmarking\b|mark scheme|moderation,1
+a8,5(a),Applies to research,research|dissertation|\bthes[ie]s\b|publication,1
 b1,5(b),Review or update commitment,review|updated|update|revised|revision|periodic|annually|next review,0
 b2,5(b),Trigger: technological change,new technolog|emerging technolog|technological develop|keep pace|as the technology|evolving,0
 b3,5(b),Trigger: legal or regulatory change,legal develop|legislation|regulatory change|change in law|statutory,0
@@ -23,14 +23,14 @@ d4,5(d),Technical dimensions of AI taught,how (?:it|ai|they|these tools) work|te
 d5,5(d),Ethical dimensions of AI taught,ethical dimension|ethical implication|ethical issue|ethics of|bias|fairness,0
 e1,5(e),Programmes updated for AI developments,"update.{0,30}programme|programme.{0,30}update|curriculum review|programme review|revalidat|periodic review",0
 f1,5(f),Disclosure of AI use required,"disclos|declar|state.{0,20}use of ai|must indicate|report.{0,15}use of ai|transparen.{0,20}use",0
-f2,5(f),Acknowledgement of AI-generated content,"acknowledge|acknowledgement|cite|citation|reference.{0,15}ai|attribut",0
-f3,5(f),"Scope covers coursework, assignments, research",coursework|assignment|research|dissertation|thesis,1
-g1,5(g),Intellectual property addressed,intellectual property|\bip\b|ipr,0
-g2,5(g),Authorship addressed,authorship|author,1
+f2,5(f),Acknowledgement of AI-generated content,"acknowledge|acknowledgement|\bcit(?:e|es|ed|ing)\b|citation|reference.{0,15}ai|attribut",0
+f3,5(f),"Scope covers coursework, assignments, research",coursework|assignment|research|dissertation|\bthes[ie]s\b,1
+g1,5(g),Intellectual property addressed,intellectual property|\bip\b|\bipr\b,0
+g2,5(g),Authorship addressed,authorship|\bauthors?\b(?!\s*:)|\bauthored\b,1
 g3,5(g),Patents addressed,patent,1
 g4,5(g),Copyright addressed,copyright|copyrighted,1
-g5,5(g),Citation norms addressed,citation|cite|referencing|reference list|bibliograph,1
-h1,5(h),Monitoring mechanism established,"monitor|oversee|audit|review of use|track.{0,15}use|log|record of use",0
+g5,5(g),Citation norms addressed,citation|\bcit(?:e|es|ed|ing)\b|referencing|reference list|bibliograph,1
+h1,5(h),Monitoring mechanism established,"monitor|oversee|\baudit(?:s|ed|ing)?\b|review of use|track.{0,15}use|\blogs?\b|\blogging\b|record of use",0
 h2,5(h),Compliance assurance,complian|comply|conform|assurance|quality assurance,0
 h3,5(h),Scope includes administration,administrat|professional services|business process|admissions|student records,1
 i01,5(i),Principle: transparency,transparen,1
@@ -38,13 +38,13 @@ i02,5(i),Principle: fairness,fairness|\bfair\b,1
 i03,5(i),Principle: accountability,accountab,1
 i04,5(i),Principle: explainability,"explainab|explicab|interpretab|explain.{0,20}decision",1
 i05,5(i),Principle: inclusivity,inclusiv|inclusion,1
-i06,5(i),Principle: non-discrimination,non-?discriminat|discriminat,1
+i06,5(i),Principle: non-discrimination,\b(?:non-?|anti-?)?discriminat,1
 i07,5(i),Principle: social justice,social justice|justice|equity,1
 i08,5(i),Principle: data privacy and security,privacy|data protection|gdpr|confidential|data security|personal data,1
 i09,5(i),Principle: environmental sustainability,environmental|sustainab|carbon|energy|climate,1
 i10,5(i),Principle: reliability,reliab|accura|robust|hallucinat,1
-i11,5(i),Principle: safety,safety|safe use|harm|unsafe,1
-j1,5(j),Risk of harm mitigated,risk|harm|mitigat|adverse|impact assessment,0
+i11,5(i),Principle: safety,safety|safe use|\bharm|unsafe,1
+j1,5(j),Risk of harm mitigated,\brisks?\b(?!-taking)|\brisking\b|\brisky\b|\bharm|mitigat|adverse|impact assessment,0
 j2,5(j),Safeguards in place,safeguard|control|protection|mechanism|measure,0
 j3,5(j),Human rights respected,human right|rights of|fundamental right,0
 j4,5(j),Dignity respected,dignity|respect for the person|humane,0
